@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Number guessing game</title>
+
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 50%;
+            max-width: 800px;
+            min-width: 480px;
+            margin: 0 auto;
+        }
+
+        .lastResult {
+            color: white;
+            padding: 3px;
+        }
+
+        .calculator {
+            width: 200px;
+            height: 200px;
+            display: grid;
+            grid-template-columns: repeat(4, 50px);
+            grid-template-rows: repeat(4, 50px);
+        }
+
+        #result {
+            width: 200px;
+            height: 35px;
+            background-color: azure;
+            font-size: 20px;
+            padding: 5px;
+        }
+        .resultParas{
+            display:none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculator</h1>
+
+    
+    <input type=text value=0 id='result' name='result'>
+    <div class="calculator">
+        <button onclick="cal(1)">1</button>
+        <button onclick="cal(2)">2</button>
+        <button onclick="cal(3)">3</button>
+        <button onclick="cal(4)">4</button>
+        <button onclick="cal(5)">5</button>
+        <button onclick="cal(6)">6</button>
+        <button onclick="cal(7)">7</button>
+        <button onclick="cal(8)">8</button>
+        <button onclick="cal(9)">9</button>
+        <button onclick="operator1('+')">+</button>
+        <button onclick="operator1('-')">-</button>
+        <button onclick="operator1('*')">*</button>
+        <button onclick="operator1('/')">/</button>
+         <button onclick="reset()">clear</button>
+        <button onclick="cal(0)">0</button> 
+        <button onclick="add()">=</button> 
+
+    </div>
+
+    <div class="resultParas">
+        <p id="firstnumber"></p>
+        <p id="secondnumber"></p>
+        <p id="operator"></p>
+    </div>
+<!--<div class='hi'>hi</div>-->
+   
+   
+    <script>
+        // Your global variables
+        var firstnumber = 0,
+            secondnumber = 0,
+            operator = "";
+        var fnumber_hidden = 0 , snumber_hidden=0;
+        var test ='';
+        
+        function add() {
+            switch (operator) {
+                case '+':
+                    result = firstnumber + secondnumber;
+                    break;
+                case '-':
+                    result = firstnumber - secondnumber;
+                      break;
+                case '/':
+                    result = firstnumber / secondnumber;
+                      break;
+                case '*':
+                    result = firstnumber * secondnumber;
+                    break;
+                default:
+                    result = 0;
+            };
+
+            document.getElementById('result').value = result;
+        };
+
+        function cal(value) {
+            let temp = "";
+            fnumber_hidden  =  document.getElementById("firstnumber");
+            snumber_hidden  =  document.getElementById("secondnumber");
+            
+            
+//            if ((firstNumber.innerHTML == "") || (firstNumber.innerHTML == null) || operator = "")  
+            if(operator === "")
+            {
+                temp =   (fnumber_hidden.innerHTML).concat(value);
+                fnumber_hidden.innerHTML=  temp;
+                firstnumber = Number(temp);
+            } else {
+                 temp =   (snumber_hidden.innerHTML).concat(value);
+                snumber_hidden.innerHTML = temp;
+                secondnumber = Number(temp);
+            }
+             document.getElementById('result').value = temp;
+        };
+
+        function operator1(value) {
+            operator = value;
+        };
+
+        function reset() {
+            document.getElementById('result').value = 0;
+            document.getElementById('firstnumber').innerHTML = "";
+            document.getElementById('secondnumber').innerHTML = "";
+            firstnumber = 0;
+            secondnumber = 0;
+            operator = "";
+
+        }
+//        document.getElementsByClassName('hi')[0].innerHTML=test;
+ 
+    </script>
+</body>
+</html>
