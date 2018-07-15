@@ -1,0 +1,234 @@
+
+/* 
+body{
+   background-color:aliceblue;
+    background-color:#2f5084;
+    font-family:Helvetica,Arial,sans-serif;
+    font-size:15px;
+    
+}*/
+body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+.bg-grey {
+      background-color: #f6f6f6;
+  }
+.item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+
+#container{
+    width:90%;
+    margin: 0 auto;
+    background-color: aliceblue;
+    background:url(../images/bg-content.gif) top right repeat-y;
+   
+}
+ .logo-small {
+      color: #d7851e;/*#f4511e;*/
+      font-size: 50px;
+  }
+  .logo {
+      color:#d7851e;
+      font-size: 200px;
+  }
+.logospace {
+    height: 50px;
+    width: 100%;
+      margin-bottom: 0;
+      background-color: #f6f6f6;
+      border: 0;
+      font-size: 12px !important;
+      border-radius: 0;
+      position: absolute;
+     top: 0;
+    left:0;
+    display:block;
+    max-height: 340px;
+  }
+.logospace img{
+    position:absolute;
+    top:0;
+    max-height: 50px;
+}
+ .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+nav{
+    background-color:@headerClr  !important;/*#d7851e;/*#f4511e;/*cornflowerblue;/*#20416c;*/
+    padding:5px;
+    margin-top:1px; 
+    width:100%;  
+   
+}
+nav .babyShower{ 
+    background-color:pink !important; 
+}
+ 
+
+ 
+nav ul{
+    float: right;
+}
+ 
+li a {
+    color:aliceblue;
+    padding:7px;
+    border-right:2px solid #dcdee2;
+}
+li a:link{
+    text-decoration: none;
+    
+}
+li{
+    display:inline;
+    margin-left: 15px;
+    margin-right:15px;
+    font-size:20px;
+    font-variant:small-caps;
+    font-weight:bold;
+        
+}
+section{
+    background-color:slategrey;
+/*    margin-top: 10px;*/
+    padding:5px;
+    width:100%;
+    margin:5px auto;
+    align-content: center;
+}
+article{
+    background-color:gainsboro;
+    margin-top: 5px;
+    padding: 10px 15px;
+    
+}
+main{
+  width:100%;
+  margin:5px;
+    
+  float:left;
+/*  padding:0 20px 0 0;*/
+ 
+}
+h2{
+     color: white
+}
+aside{
+    
+    float:left;
+/*    padding-left:15px;*/
+/*    background-color:lightgrey;*/ 
+}
+
+.panelHeight{
+    max-height: 300px;
+}
+
+#mypanel-body .panel-body{
+    max-height:350px;
+}
+
+.footer-design{
+  background-image: url(Images/elephant.png);
+  background-repeat: repeat-x; 
+  height:100px;
+ float:bottom;
+}
+
+footer {
+  clear: both; 
+  
+  color: white;
+  padding: 5px 5px;
+  float:bottom; 
+  text-align: center;
+}
+@media only screen and (max-width:768){
+      main{width:70%}
+     .sidenav{display: none;}
+}
+@media only screen and (max-width:460){
+     main{width:100%} 
+    .sidenav{display: none;}
+     
+}
+@media (max-device-width: 480px) and (orientation: landscape) {
+    .logospace{
+         max-height: 200px;
+    }
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+.slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+ 

@@ -1,0 +1,211 @@
+/*$(document).ready(function(){*/
+    
+var slideIndex=1;
+var imgName ;  
+var TOTALIMAGE=8;
+var ISLASTIMAGE;
+var CurrCatagory;  
+  var images=[];
+
+function startloop(cnt){ 
+    var count=cnt;
+   //   $( ".mySlides").children().each(function(cnt){ 
+    CurrCatagory.children().each(function(cnt){ 
+          if (count===cnt)
+          {imgName=$(this).attr('src');}
+          console.log(cnt + ": " + name);
+          console.log(cnt + ": " + $( this).attr('src'));
+          
+     });
+  }
+
+function createDom(catname){
+    
+}
+
+function showSlide(index){
+  
+    //get the images
+  
+   /* var slides1=document.getElementsByClassName('mySlides');*/
+    var modalcontent=$('.activeImg');
+    var ntxt=$('.numbertext');
+   
+    var slides=$('.mySlides img');
+  
+     startloop(slideIndex-1);
+     $('.activeImg').attr("src",imgName);
+   // modalcontent.attr("src",imgName);
+    ntxt.text(slideIndex + " / "+ TOTALIMAGE);
+}
+
+
+function openModal(){   
+  /*   document.getElementById('myModel').style.display="block";*/
+    $('#myModel').css({"display":"block"});
+}
+    
+function closeModal(){
+   /* document.getElementById('myModel').style.display="none";*/
+    $('#myModel').css({"display":"none"});
+    slideIndex=1;
+    ISLASTIMAGE='N';
+}
+
+
+function openModal1(cat,index){ 
+    var i=0;
+    CurrCatagory=cat;
+    
+   // $(".activeSlides").removeClass("activeSlides") ;
+   
+     
+  //   <img src="Images/kid/kid-9.jpg" width=150px height=150px      onclick="currentSlide(1)" class="hover-shadow">
+    // <div id="birthday1" class="mySlides inactiveSlides">
+  /*   document.getElementById('myModel').style.display="block";*/
+    
+  //  CurrCatagory.removeClass('inactiveSlides');
+  //  CurrCatagory.addClass('activeSlides');
+     // createDom(cat);
+     // start
+    var items=[ ];
+    for (i = 1; i < 9; i++) {
+        items.push("Images/innercover/" + cat + "/1/" + i +".jpg" );
+      }
+   
+     
+    $.each(items,function(index, value){
+        images.push('<img src="' + value +'" width=150 height=150 onclick="currentSlide(' + ++index  +')" class="hover-shadow">' )
+    });
+    
+    $('<div/>',{
+        id:cat + index,
+        class:"mySlides activeSlides",
+        html:images.join(''),
+    }).appendTo($('#myModelContent'));
+    
+    var vcat= '#' + CurrCatagory + index
+    CurrCatagory=$(vcat);
+    
+    //end
+    $('#myModel').css({"display":"block"});
+}
+
+
+function plusSlides(n)
+{
+    
+   if((slideIndex===TOTALIMAGE) &&(n==1))/* Last Image -next image*/ 
+      {  
+          $('.next').css({'background-color':'lightgrey'});
+          $('.prev').css({'background-color':'rgba(0, 0, 0, 0.8)'});
+          ISLASTIMAGE='Y';
+          return;
+      }
+   if((slideIndex===1) &&(n==-1))/* Last image-prev image*/ 
+      {
+         {  $('.prev').css({'background-color':'lightgrey'});
+            $('.next').css({'background-color':'rgba(0, 0, 0, 0.8)'});
+             ISLASTIMAGE='Y';
+             return;} 
+      }
+  ISLASTIMAGE='N';    
+  slideIndex +=n; /* slideindex= slideindex + n */ 
+  showSlide(slideIndex);
+}
+    
+function currentSlide(n) {
+     
+  showSlide(slideIndex = n);
+}
+
+function openGallery(catagory){
+    var vcat= '#' + catagory
+    var catname=$(vcat);
+    $(".activeGallery").removeClass("activeGallery").addClass('inactiveGallery'); 
+     catname.removeClass("inactiveGallery"); 
+     catname.addClass("activeGallery"); 
+    
+     console.log(catname); 
+     console.log($("#babyshower")); 
+    
+}
+
+function sidecollapse1(){
+   $('.sidenav a').css({
+                 "z-index":"99999999",
+                 "display":"block"
+                 }
+                );
+     $('.sidenav').css({ 
+               "z-index":"99999999"}
+                )
+    
+    $('.mainGallery').css({
+                 "z-index":"-1",
+                 }
+                );
+    
+     console.log( $('.sidenav')); 
+    
+}
+//toggle the sidenav button whrn the size is 1025px
+function sidecollapse() {
+    
+    var x = $('.sidenav a');
+   
+    if ( x.css("display") === "none") {
+         x.css({"display":"block"});
+    } else {
+        x.css({"display":"none"});
+    }
+}
+//
+function labelwrap(objImg1){
+   var nextelm=$(objImg1).next();
+   // $('label:first').css({"opacity":"1"});
+    nextelm.next().css({"opacity":"1"});
+}
+ 
+function normalImg(objImg2){
+    
+    // $('label:first').css({"opacity":"0"});
+     var nextelm=$(objImg2).next();
+   // $('label:first').css({"opacity":"1"});
+    nextelm.next().css({"opacity":"0"});
+}
+
+
+$(document).ready(function(){
+     $(".sidenav a").on('click', function(event) {
+     $(".activemenu").removeClass("activemenu") ;
+     $(this).addClass('activemenu');
+         
+     });
+    
+     
+    $(".next,.prev").hover(function(){
+         if(slideIndex===1)/* Last Image -next image*/ 
+            { 
+               $('.prev').css("background-color", "lightgrey");
+            }
+        else if(slideIndex==TOTALIMAGE)
+            {
+                $('.next').css("background-color", "lightgrey"); 
+            }
+        else
+             {
+               $(this).css({'background-color':'rgba(0, 0, 0, 0.8)'}); 
+            }
+        }, function(){
+        $(this).css("background-color", "white");
+    });
+    
+   
+    
+});
+
+ /* }); */
+
+
+ 

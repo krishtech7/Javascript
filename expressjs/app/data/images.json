@@ -1,0 +1,36 @@
+{  
+ "albums": [
+    {
+      "id":"1",
+      "type":"wedding",
+      "name": "Indhu & Ramesh",
+      "total": "8" 
+    },
+      {
+       "id":"2",
+       "type":"wedding",
+      "name":"Selva & Nivetha" ,
+      "total": "8" 
+    },
+  
+    {
+       "id":"1",
+       "type":"engagement",
+       "name":"Aswini &amp; Sakarraj" ,
+       "total": "8" 
+    },
+    {
+      "id":"2",
+      "type":"engagement",
+      "name":"Indhu &amp; Ramesh" ,
+      "total": "8" 
+   },
+
+   {
+    "id":"3",
+    "type":"engagement",
+    "name":"Nivetha &amp; Selva" ,
+    "total": "8" 
+ }
+     ]
+}

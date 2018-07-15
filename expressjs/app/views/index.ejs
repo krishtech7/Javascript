@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <% include partials/templates/head.ejs %>
+   <% include partials/templates/scripts.ejs %>
+  
+</head>
+
+<!--<body style="background-image:url('images/sky.jpg')">  -->
+
+<body id="<%= pageID %>" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <% include partials/templates/header.ejs %> 
+    <div id="portfolio" class="container-fluid text-center bg-grey">
+        <div class="panel-body">
+            <div class="container">
+                <h2 class='h3font'>Wedding </h2>
+                <h3 class='h3font'>Gallery</h3>
+                <p style="font-size:125%;font-family: Montserrat, sans-serif;">“To get the full value of joy you must have someone to divide it with. - " </p>
+                <p style="text-align:center">Mark Twain
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <br/>
+   
+
+    <div class="galleryPanel "> 
+        <button id="sidemenubtn" type="button" aria-expanded="true" onclick="sidecollapse()">
+                <span class="glyphicon glyphicon-menu-hamburger"> </span>
+         </button>
+         <% include partials/content/sidebar.ejs %>
+        <div id='gallery' class='gallery-body'>  
+            <!-- <ul id='wedding' class='activeGallery skrow'>  -->
+                    <div class="skrow"> 
+                <% if(pageID == 'Wedding'){%>
+                    <% include partials/content/albums.ejs%>
+                <%}%>
+                    </div> 
+            <ul id='engagement' class='albums'> 
+                    <% if(pageID == 'engagement'){%>
+                        <% include partials/content/albums.ejs%>
+                    <%}%>
+                </ul> 
+           
+           
+
+                
+
+           
+
+         
+
+
+        </div>
+    </div>
+
+    <div id='myModel' class='model'>
+        <div class='txtbanner'>
+            <p><strong>hkjhkj</strong></p>
+            <Input type='button' class='close glyphicon glyphicon-remove' onclick="closeModal()" value='X'> </Input>
+
+        </div>
+
+        <!-- <div class='prev'> &lt;  </div>  -->
+        <div id='myModelContent' class='modal-content'>
+
+            <img src="Images/kid/kid-11.jpg" class='activeImg'>
+
+
+            <a class="prev" onclick="plusSlides(-1)">  <span class="glyphicon glyphicon-chevron-left"></span> </a>
+            <a class="next" onclick="plusSlides(1)"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
+            <div class="numbertext">1 / 8</div>
+
+        </div>
+
+    </div>
+
+     
+
+    <!--
+   
+  <footer class="container-fluid text-center">
+       <a href="#myPage" title="To Top">
+          <span class="glyphicon glyphicon-chevron-up"></span>
+       </a>
+      
+       <p>&copy; RPG . Bangalore </p>
+       <p><span class="glyphicon glyphicon-phone"></span> 0435201303  </p>
+    </footer>
+     -->
+    <script>
+        AOS.init();
+    </script>
+   
+
+   
+    <!--
+  <footer class="container-fluid text-center">
+       <a href="#myPage" title="To Top">
+          <span class="glyphicon glyphicon-chevron-up"></span>
+       </a>
+      
+       <p>&copy; RPG . Bangalore </p>
+       <p><span class="glyphicon glyphicon-phone"></span> 0435201303  </p>
+    </footer> 
+    < 
+    -->
+
+</body>
+<footer class="container-fluid text-center">
+    <p>&copy; RGP photography . Bangalore </p>
+    <p><span class="glyphicon glyphicon-phone"></span> <a href="tel:847-555-5555">8903443733</a> </p>
+    <p><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:rgpphotography94@gmail.com Subject=Enquire" target="_top">rgpphotography94@gmail.com</a></p>
+    <p> Designed by:
+        <a href="mailto:shikavi@yahoo.com Subject=Enquire" target="_top">krishtech</a></p>
+
+</footer>
+
+</html>

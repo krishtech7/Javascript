@@ -1,0 +1,24 @@
+<nav Id='mySidebar' class="sidenav ">
+        <div class=dropdown1>
+            <a href="#" onclick="openGallery('wedding'); return false;" class='activemenu'>Wedding<i class="fa fa-angle-down"></i></a>
+            <div class='dropdown-content1'>
+                <% allAlbums.forEach(function(item){ %> 
+                    <% if(item.type == 'wedding'){%>
+                     <a href="/wedding/<%= item.type %><%= item.id %>"><%= item.name %></a> <%}%>
+               <% }); %>
+                <a href="#!" onclick="displayGallery(2, 'Pranav 2st Birthday',8)">Pranav's 2st Birthday</a> 
+            </div>
+        </div>
+        <div class=dropdown1>
+           <a href="#!" onclick="openGallery('engagement'); return false;">Engagement<i class="fa fa-angle-down"></i></a>
+           <div class='dropdown-content1'>
+                <% allAlbums.forEach(function(item){ %> 
+                    <% if(item.type == 'engagement'){%>
+                     <a href="/wedding/<%= item.type %><%= item.id %>"><%= item.name %></a> <%}%>
+               <% }); %>
+                <a href="#!" onclick="displayGallery(2, 'Pranav 2st Birthday',8)">Pranav's 2st Birthday</a> 
+            </div>
+        </div>
+        <a href="#!" onclick="openGallery('prewedding'); return false;">PreWedding</a>
+        <a href="#!" onclick="openGallery('postwedding'); return false;">PostWedding</a> 
+    </nav> 

@@ -1,0 +1,37 @@
+{  
+ "albums": [
+    {
+       "id":"1",
+      "name": "Pranav's 1st Birthday",
+      "total": "8" ,
+      "type":"wedding"
+    },
+      {
+       "id":"2",
+      "name":"Pranav's 2st Birthday" ,
+      "total": "8" ,
+      "type":"wedding"
+    },
+     
+    {
+       "id":"1",
+       "name":"Aswini &amp; Sakarraj" ,
+       "total": "8" ,
+       "type":"engagement"
+    },
+    {
+      "id":"2",
+      "name":"Indhu &amp; Ramesh" ,
+      "total": "8",
+      "type":"engagement" 
+   },
+  
+
+   {
+    "id":"3",
+    "name":"Nivetha &amp; Selva" ,
+    "total": "8",
+    "type":"engagement" 
+ }
+     ]
+}

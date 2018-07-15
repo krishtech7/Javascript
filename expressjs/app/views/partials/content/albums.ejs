@@ -1,0 +1,45 @@
+<!-- <% for (var i = 0; i < photos.length;  i++) { var temp="";var j=i+1;if(i==0){temp='double';}else if(i==1){temp='double-col';} %>  
+        <li class="<%=temp%> text-center skcolumn" panel data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                <a href="#">
+                <figure class="albumr">
+                    <img  src="/Images/innercover/<%= photos[i].type%>/<%= photos[i].id%>/<%=j%>.jpg" 
+                    onmouseover="labelwrap(this)" onmouseout="normalImg(this)" 
+                    onclick="openModal1('<%= photos[i].type%>',1);currentSlide(1,'<%= photos[i].name%>')"
+                     class="hover-shadow item<%=j%>" />
+                    <!-- <img width=50 height=50 src="/Images/logo-thumbnail.jpg" class="hover-shadow img-thumbnail imgLogo" /> -->
+                    <!-- <label class="labelwrap"> <%= photos[i].name%></label>
+                </figure>
+                </a>
+            </li>
+<% }; %> -->  
+
+        <div class="skcolumn">
+<% var total= Math.round(photos.length/3); for (var i = 0; i < total;  i++) { var temp="";var j=i+1;if(i==0){temp='double';}else if(i==1){temp='double-col';} %>  
+         
+                    <img  src="/Images/innercover/<%= photos[i].type%>/<%= photos[i].id%>/<%=j%>.jpg" 
+                    style="width:100%" onmouseover="labelwrap(this)" onmouseout="normalImg(this)" 
+                    onclick="openModal1('<%= photos[i].type%>',1);currentSlide(1,'<%= photos[i].name%>')"
+                     class="hover-shadow item<%=j%>" />
+                    
+<% }; %>
+        </div>
+        <div class="skcolumn">
+                <% for (var i = total; i < (total+total);  i++) { var temp="";var j=i+1;if(i==0){temp='double';}else if(i==1){temp='double-col';} %>  
+                         
+                                    <img  src="/Images/innercover/<%= photos[i].type%>/<%= photos[i].id%>/<%=j%>.jpg" 
+                                    style="width:100%" onmouseover="labelwrap(this)" onmouseout="normalImg(this)" 
+                                    onclick="openModal1('<%= photos[i].type%>',1);currentSlide(1,'<%= photos[i].name%>')"
+                                     class="hover-shadow item<%=j%>" />
+                                    
+                <% }; %>
+                        </div>
+                        <div class="skcolumn">
+                                <% var cnt=total+total;for (var i = cnt; i < photos.length;  i++) { var temp="";var j=i+1;if(i==0){temp='double';}else if(i==1){temp='double-col';} %>  
+                                         
+                                                    <img  src="/Images/innercover/<%= photos[i].type%>/<%= photos[i].id%>/<%=j%>.jpg" 
+                                                    style="width:100%" onmouseover="labelwrap(this)" onmouseout="normalImg(this)" 
+                                                    onclick="openModal1('<%= photos[i].type%>',1);currentSlide(1,'<%= photos[i].name%>')"
+                                                     class="hover-shadow item<%=j%>" />
+                                                    
+                                <% }; %>
+                                        </div>

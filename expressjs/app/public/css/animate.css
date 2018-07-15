@@ -1,0 +1,116 @@
+.flex-container {
+  display: flex;
+  border:none;
+}
+#rose {
+    width: 50px;
+    height: 50px;
+    z-index: 1; 
+    float:left;
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+#rose1 {
+    width: 50px;
+    height: 50px;
+    z-index: 1; 
+    float:left;
+    position: relative;
+    -webkit-animation-name: animrose1; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: animrose1;
+    animation-duration: 4s;
+   animation-iteration-count: infinite;
+}
+
+* Safari 4.0 - 8.0 */
+@-webkit-keyframes animrose1 {
+      0%   { left:70%; top:0px;}
+     10%  { left:70%; top:50px;}
+     15%  { left:70%; top:125px;}
+     25%  { left:70%; top:550px;}
+    50%  { left:70%; top:600px;}
+    65%  { left: 70%;top:700px;}
+    75%  { left:70%; top:800px;}
+    100% { left:70%; top:900px;}
+}
+
+/* Standard syntax */
+@keyframes animrose1 {
+    0%   { left:70%; top:0px;}
+     10%  { left:70%; top:50px;}
+     15%  { left:70%; top:125px;}
+     25%  { left:70%; top:550px;}
+    50%  { left:70%; top:600px;}
+    65%  { left: 70%;top:700px;}
+    75%  { left:70%; top:800px;}
+    100% { left:70%; top:900px;}
+} 
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+       0%   { left:50%; top:0px;}
+    10%  { left:50%; top:50px;}
+     15%  { left:50%; top:125px;}
+     25%  { left:50%; top:550px;}
+    50%  { left:50%; top:600px;}
+    65%  { left: 50%;top:700px;}
+    75%  { left:50%; top:800px;}
+    100% { left:50%; top:900px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   { left:50%; top:0px;}
+    10%  { left:50%; top:50px;}
+     15%  { left:50%; top:125px;}
+     25%  { left:50%; top:550px;}
+    50%  { left:50%; top:600px;}
+    65%  { left: 50%;top:700px;}
+    75%  { left:50%; top:800px;}
+    100% { left:50%; top:850px;}
+} 
+
+ 
+#rose2 {
+    width: 50px;
+    height: 50px;
+    z-index: 1; 
+    position: relative; 
+    -webkit-animation-name: animrose; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: animrose;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animrose {
+     0%   { left:20%; top:0px;}
+    10%  { left:20%; top:50px;}
+    15%  { left:20%; top:125px;}
+    25%  { left:20%; top:550px;}
+    50%  { left:20%; top:600px;}
+    65%  { left:20%; top:700px;}
+    75%  { left:20%; top:800px;}
+    100% { left:20%; top:800px;}
+}
+
+/* Standard syntax */
+@keyframes animrose {
+     0%   { left:20%; top:0px;}
+    10%  { left:20%; top:50px;}
+    15%  { left:20%; top:125px;}
+    25%  { left:20%; top:550px;}
+    50%  { left:20%; top:600px;}
+    65%  { left:20%; top:700px;}
+    75%  { left:20%; top:800px;}
+    100% { left:20%; top:800px;}
+}
+    
